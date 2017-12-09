@@ -8,27 +8,61 @@
   <!-- Linking CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
-  <div class="container">
-    <div class="header"></div>
+<div class="container">
+
+  <div class="header"><h2>Star Wars RPG</h2></div>
+
+  <div class="margin"></div>
+
+  <div class="gameZone">
+
     <div class="row" id="characterList">
-      <div class="character"></div>
-      <div class="character"></div>
-      <div class="character"></div>
-      <div class="character"></div>
+      <div class="character" id="ray">
+        <img src="assets/images/ray.jpg" height="100px" width="100px">
+        <div class="rayHealth">100</div>
+      </div>
+      <div class="character" id="kylo">
+        <img src="assets/images/kylo.jpg" height="100px" width="100px">
+        <div class="kyloHealth">100</div>
+      </div>
+      <div class="character" id="finn">
+        <img src="assets/images/finn.jpg" height="100px" width="100px">
+        <div class="finnHealth">100</div>
+      </div>
+      <div class="character" id="bb8">
+        <img src="assets/images/bb8.png" height="100px" width="100px">
+        <div class="bb8Health">100</div>
+      </div>
     </div>
-    <div class="row" id="myCharacter"></div>
-    <div class="row" id="opponentList"></div>
-    <div class="row" id="fight">
-      <button>
+
+
+    <div class="row" id="holdCharacter">
+      <h4>My Character</h4>
+      <div class="row" id="myCharacter"></div>
+    </div>
+
+    <div class="row" id="opponentList"><h4>My Opponents</h4></div>
+
+    <div class="row" id="fight"><h4>Fight Screen</h4>
+      <button class="attack">
         <p>Attack</p>
       </button>
     </div>
-    <div class="row" id="myOpponent"></div>
+
+    <div class="row" id="holdOpponent"><h4>Defender</h4>
+      <div class="row" id="myOpponent"></div>
+    </div>
   </div>
 
-  <script type="text/javascript" src="assets/javascript/script.js"></script>
+  <div class="margin"></div>
+
+</div>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 </html>
