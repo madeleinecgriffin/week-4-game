@@ -1,11 +1,38 @@
 body, html {
-	background-image: url("../images/wars.jpg");
-	background-repeat: repeat;
+	background-image: url("../images/deathstar3.jpg");
+	background-repeat: none;
 	padding: 0;
  	margin: 0;
  	box-sizing: border-box;
  	background-size: 100%;
- 	height: 700px;
+ 	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+.container {
+	color: white;
+}
+
+.header {
+	text-align: center;
+}
+
+.margin {
+	width: 15%;
+	float: left;
+	min-height: 1px;
+}
+
+.gameZone {
+	float: left;
+	border: solid white 4px;
+	width: 70%;
+	margin-bottom: 20px;
+	font-size: 30px;
+	padding-left: 40px;
 }
 
 .row {
@@ -15,30 +42,37 @@ body, html {
 	overflow: hidden;
 }
 
+.instructions {
+	font-size: 20px;
+	padding: 0px 10px 10px 10px;
+	width: 95%;
+}
+
+.name {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding-top: 2px;
+}
+
 .character {
 	border: solid white 1px;
 	float: left;
 	width: 20%;
 	text-align: center;
-	margin-left: 35px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
-.container {
-	color: white;
-	height: 700px;
+.health {
+	border-top: none;
 }
 
-.header {
-	text-align: center;
-}
-.margin {
-	width: 15%;
-	float: left;
-	min-height: 1px;
+.opponent {
+	border-color: darkred;
+	color: darkred;
 }
 
-.gameZone {
-	float: left;
-	border: solid white 1px;
-	width: 70%;
+.attack {
+	font-size: 15px;
 }
