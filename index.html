@@ -23,19 +23,15 @@
     <div class="row" id="characterList">
       <div class="character" id="ray">
         <img src="assets/images/ray.jpg" height="100px" width="100px">
-        <div class="rayHealth">100</div>
       </div>
       <div class="character" id="kylo">
         <img src="assets/images/kylo.jpg" height="100px" width="100px">
-        <div class="kyloHealth">100</div>
       </div>
       <div class="character" id="finn">
         <img src="assets/images/finn.jpg" height="100px" width="100px">
-        <div class="finnHealth">100</div>
       </div>
       <div class="character" id="bb8">
         <img src="assets/images/bb8.png" height="100px" width="100px">
-        <div class="bb8Health">100</div>
       </div>
     </div>
 
@@ -43,19 +39,25 @@
     <div class="row" id="holdCharacter">
       <h4>My Character</h4>
       <div class="row" id="myCharacter"></div>
+      <div class="row" id="myHealth"></div>
     </div>
 
     <div class="row" id="opponentList"><h4>My Opponents</h4></div>
 
-    <div class="row" id="fight"><h4>Fight Screen</h4>
+    <div class="row" id="holdOpponent"><h4>Defender</h4>
+      <div class="row" id="myOpponent">
+      </div>
+      <div class="row" id="opponentHealth"></div>
+    </div>
+
+    <div class="row" id="fight">
+      <h4>Fight Screen</h4>
       <button class="attack">
         <p>Attack</p>
       </button>
+      <p id="fightText"></p>
     </div>
 
-    <div class="row" id="holdOpponent"><h4>Defender</h4>
-      <div class="row" id="myOpponent"></div>
-    </div>
   </div>
 
   <div class="margin"></div>
