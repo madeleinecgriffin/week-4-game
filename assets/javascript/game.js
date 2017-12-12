@@ -13,7 +13,7 @@ var kylo = {
 	name: "kylo",
 	HP: 140,
 	attack: 12,
-	counterAttack: 10,
+	counterAttack: 11,
 	//win if battle finn first, lose if battle bb8 or rey first
 }
 var finn = {
@@ -27,7 +27,7 @@ var bb8 = {
 	name: "bb8",
 	HP: 105,
 	attack: 14,
-	counterAttack: 18,
+	counterAttack: 20,
 	//lose if battle rey first, win if battle kylo or finn first
 }
 
@@ -47,11 +47,11 @@ var opponentCounter = 0;
 
 //choosing your character and the defenders - this moves the correct image to the correct location
 $("#rey").on("click", function () {
+	$("#myOpponent").text("");
 	//if rey is in the top character list, meaning no character has been chosen
 	if($("#rey").parents("#characterList").length == 1) {
 		//clears text from divs in case player has chosen "attack" before picking a character
 		$("#myCharacter").text("");
-		$("#myOpponent").text("");
 		//moves the rey character div from the character list div to the my character div
 		$("#rey").detach().appendTo("#myCharacter");
 		//moves the rest of the character divs to the opponent list div
@@ -73,7 +73,6 @@ $("#rey").on("click", function () {
 	//if character has already selected a player, meaning rey is in the opponent list
 	if($("#rey").parents("#opponentList").length == 1 && $("#myOpponent").children().length == 0) {
 		//clears the my opponent div and moves rey's character div to the my opponent list
-		$("#myOpponent").text("");
 		$("#holdOpponentList").text("");
 		//move the rey div to the defender div
 		$("#rey").detach().appendTo("#myOpponent");
@@ -88,9 +87,10 @@ $("#rey").on("click", function () {
 
 //does the same as above if kylo is clicked
 $("#kylo").on("click", function () {
+	$("#myOpponent").text("");
+
 	if($("#kylo").parents("#characterList").length == 1) {
 		$("#myCharacter").text("");
-		$("#myOpponent").text("");
 		$("#rey").detach().appendTo("#opponentList");
 		$("#kylo").detach().appendTo("#myCharacter");
 		$("#finn").detach().appendTo("#opponentList");
@@ -104,21 +104,21 @@ $("#kylo").on("click", function () {
 	}
 
 	if($("#kylo").parents("#opponentList").length == 1 && $("#myOpponent").children().length == 0) {
-		$("#myOpponent").text("");
+		$("#holdOpponentList").text("");
 		$("#kylo").detach().appendTo("#myOpponent");
 		myOpponent = kylo;
 		opponentChosen = true;
 		$("#kyloHealth").addClass("opponentHealth");
-		$("#holdOpponentList").text("");
 		$("#fightText").append("Now click the button to attack your opponent!")
 	}
 })
 
 //does the same as above if finn is clicked
 $("#finn").on("click", function () {
+	$("#myOpponent").text("");
+
 	if($("#finn").parents("#characterList").length == 1) {
 		$("#myCharacter").text("");
-		$("#myOpponent").text("");
 		$("#rey").detach().appendTo("#opponentList");
 		$("#kylo").detach().appendTo("#opponentList");
 		$("#finn").detach().appendTo("#myCharacter");
@@ -132,21 +132,21 @@ $("#finn").on("click", function () {
 	}
 
 	if($("#finn").parents("#opponentList").length == 1 && $("#myOpponent").children().length == 0) {
-		$("#myOpponent").text("");
+		$("#holdOpponentList").text("");
 		$("#finn").detach().appendTo("#myOpponent");
 		myOpponent = finn;
 		opponentChosen = true;
 		$("#finnHealth").addClass("opponentHealth");
-		$("#holdOpponentList").text("");
 		$("#fightText").append("Now click the button to attack your opponent!")
 	}
 })
 
 //does the same as above if bb8 is clicked
 $("#bb8").on("click", function () {
+	$("#myOpponent").text("");
+
 	if($("#bb8").parents("#characterList").length == 1) {
 		$("#myCharacter").text("");
-		$("#myOpponent").text("");
 		$("#rey").detach().appendTo("#opponentList");
 		$("#kylo").detach().appendTo("#opponentList");
 		$("#finn").detach().appendTo("#opponentList");
@@ -160,12 +160,11 @@ $("#bb8").on("click", function () {
 	}
 
 	if($("#bb8").parents("#opponentList").length == 1 && $("#myOpponent").children().length == 0) {
-		$("#myOpponent").text("");
+		$("#holdOpponentList").text("");
 		$("#bb8").detach().appendTo("#myOpponent");
 		myOpponent = bb8;
 		opponentChosen = true;
 		$("#bb8Health").addClass("opponentHealth");
-		$("#holdOpponentList").text("");
 		$("#fightText").append("Now click the button to attack your opponent!")
 	}
 })
