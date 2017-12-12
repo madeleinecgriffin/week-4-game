@@ -22,7 +22,7 @@
 
   <div class="gameZone">
 
-    <div class="row"><h4>Instructions:</h4><p class="instructions">First, choose your character from the list below. Then choose your first opponent from the list of opponents. Click the "Attack" button to fight your opponent. Pay attention to the message that appears in the "Fight Screen" area after you attack to see how much damage you do and how much damage your opponent did. Each turn your attack power will increase by your base attack. Your opponent's attack will not increase. Once you have defeated one opponent, click on the opponent you would like to battle next. Try to defeat all opponents before your HP reaches 0.</p></div>
+    <div class="row"><h4>Instructions:</h4><p class="instructions">First, choose your character from the list below. Then choose your first opponent from the list of opponents. Click the "Attack" button to fight your opponent. Pay attention to the message that appears in the "Fight Screen" area after you attack to see how much damage your attack did and how much damage your opponent's counter attack did. Each turn your attack power will increase by your base attack. Your opponent's counter attack will not increase. Once you have defeated one opponent, click on the opponent you would like to battle next. Try to defeat all opponents before your HP reaches 0.</p></div>
     
 
     <div class="row" id="characterList">
@@ -30,18 +30,22 @@
       <div class="character" id="rey">
         <div class="name">Rey</div>
         <img src="assets/images/ray.jpg" height="100px" width="100px">
+        <div class="health" id="reyHealth">HP: 125</div>
       </div>
       <div class="character" id="kylo">
         <div class="name">Kylo Ren</div>
         <img src="assets/images/kylo.jpg" height="100px" width="100px">
+        <div class="health" id="kyloHealth">HP: 140</div>
       </div>
       <div class="character" id="finn">
         <div class="name">Finn</div>
         <img src="assets/images/finn.jpg" height="100px" width="100px">
+        <div class="health" id="finnHealth">HP: 130</div>
       </div>
       <div class="character" id="bb8">
         <div class="name">BB8</div>
         <img src="assets/images/bb8.png" height="100px" width="100px">
+        <div class="health" id="bb8Health">HP: 105</div>
       </div>
     </div>
 
@@ -51,7 +55,6 @@
       <div class="row" id="myCharacter">
         <p class="instructions">Click on one of the characters above to make them your play character.</p>
       </div>
-      <div class="health" id="myHealth"></div>
     </div>
 
     <div class="row" id="opponentList">
@@ -63,7 +66,6 @@
     <div class="row" id="holdOpponent"><h4>Current Defender</h4>
       <div class="row" id="myOpponent">
       </div>
-      <div class="health opponent" id="opponentHealth"></div>
     </div>
 
     <div class="row" id="fight">

@@ -1,3 +1,4 @@
+/*background image and font*/
 body, html {
 	background-image: url("../images/deathstar3.jpg");
 	background-repeat: none;
@@ -16,16 +17,19 @@ h1 {
 	color: white;
 }
 
+/*<div> title*/
 .header {
 	text-align: center;
 }
 
+/*<div> margin to center gameZone*/
 .margin {
 	width: 15%;
 	float: left;
 	min-height: 1px;
 }
 
+/*<div> margin to center gameZone*/
 .gameZone {
 	float: left;
 	border: solid white 4px;
@@ -35,6 +39,7 @@ h1 {
 	padding-left: 40px;
 }
 
+/*<div> sections of the gameZone*/
 .row {
 	width: 100%;
 	float: none;
@@ -42,12 +47,14 @@ h1 {
 	overflow: hidden;
 }
 
+/*<p> instructions for the game */
 .instructions {
 	font-size: 20px;
 	padding: 0px 10px 10px 10px;
 	width: 95%;
 }
 
+/*<div> character names*/
 .name {
 	float: left;
 	width: 100%;
@@ -55,6 +62,7 @@ h1 {
 	padding-top: 2px;
 }
 
+/*<div> character containers*/
 .character {
 	border: solid white 1px;
 	float: left;
@@ -64,15 +72,25 @@ h1 {
 	margin-right: 15px;
 }
 
+/*<div> health boxes*/
 .health {
 	border-top: none;
 }
 
+/*<div> character stats*/
+.stat {
+	font-size: 15px;
+	float: left;
+	width: 33%;
+}
+
+/*<div> changes characters to opponent theme*/
 .opponent {
 	border-color: darkred;
 	color: darkred;
 }
 
+/*<button> to attack*/
 .attack {
 	font-size: 15px;
 }
